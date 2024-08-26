@@ -1,7 +1,15 @@
 ---
-sidebar_label: 'Tema 5'
+sidebar_label: 'S.A. 5 Textos, tipografías y colores'
 sidebar_position: 6
 ---
-# Tema 5
+# Textos, tipografías y colores
 
-This is my **Tema 5**!
+## Tabla de Contenidos
+- [Textos y tipografías](#textos-y-tipografías)
+- [Colores](#colores)
+
+---
+
+## Textos y tipografías
+
+## Colores
