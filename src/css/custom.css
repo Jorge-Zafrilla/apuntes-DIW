@@ -3,6 +3,11 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+a{
+  text-decoration: none !important;
+  color: var(--ifm-link-color) ; 
+}
+
  .highlight {
   background-color: #45aac6;
   border-radius: 10px;
@@ -34,6 +39,8 @@
   --ifm-color-primary-lightest: #3c7ead;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --sombra-color: rgba(0,0,0,0.5); /* Color de la sombra en modo claro */
+  
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -46,4 +53,469 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --sombra-color: rgba(255,255,255,0.5); /* Color de la sombra en modo oscuro */
+}
+
+
+/* ESTILOS PARA LOS APUNTES */
+
+/* Tema 4 */
+.rgba, .hsl, .hsla, .bg-color, .degradado-lineal, .degradado-radial, .sombra, .sombra-texto {
+  font-family: Arial;
+  margin: 10px 10px;
+  text-align: left;
+  font-weight: bold;
+  padding: 15px 30px;
+  width: 40%;
+}
+
+.rgba{
+  color: rgba(255, 0, 0, 0.5); /* Rojo semitransparente */
+}
+
+.hsl{
+  color: hsl(120, 100%, 50%); /* Verde puro */
+}
+
+.hsla{
+  color: hsla(120, 100%, 50%, 0.3); /* Verde con 30% de opacidad */
+}
+
+.bg-color{
+  text-align: center;
+  background-color: #5f92f9;
+}
+
+.bg-img{
+  background-image: url('/docs/Apuntes/img/imagen.png');
+  height: 100px;
+}
+
+.bg-position{
+  background-image: url('/docs/Apuntes/img/imagen.png');
+  height: 100px;
+  background-position: center center;
+}
+
+.bg-completo{
+  background: url('/docs/Apuntes/img/imagen.png') top left no-repeat, 
+            url('/docs/Apuntes/img/imagen-tenis.png') center no-repeat, 
+            #ffffff;
+  height: 200px;
+}
+
+.degradado-lineal{
+  background: linear-gradient(45deg, #ff0000, #0000ff);
+}
+
+.degradado-radial{
+  background: radial-gradient(circle, #ff0000, #0000ff);
+}
+
+.sombra{
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.sombra-texto{
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.filtro{
+  background-image: url('/docs/Apuntes/img/imagen.png');
+  height: 100px;
+  background-position: center center;
+  filter: grayscale(100%);
+}
+
+/* GRID */
+.container-pix, .container-prop, .container-frac{
+  background-color: #274271;
+  font-family: Arial;
+  margin: 10px 10px;
+  text-align: center;
+  font-weight: bold;
+  padding: 1% 1%;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.container-pix{
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 30px 30px;
+}
+
+.container-prop{
+  display: grid;
+  grid-template-columns: 10% 50% 100px;
+  grid-template-rows: 30px 30px;
+}
+
+.container-frac{
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 5fr;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 50px 50px 50px;
+  gap: 5px;
+
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: lightcoral;
+  text-align: center;
+}
+
+.item2 {
+  background-color: lightblue;
+  text-align: center;
+}
+
+.item3 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: lightgreen;
+  text-align: center;
+}
+
+.item4 {
+  background-color: lightyellow;
+  text-align: center;
+}
+
+.item5 {
+  background-color: lightpink;
+  text-align: center;
+  grid-column: 2/4;
+}
+
+
+.container-ejemplo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+
+}
+
+.box1 { background: lightcoral; }
+.box2 { background: lightsalmon; }
+.box3 { background: lightblue; }
+.box4 { background: lightcyan; }
+.box5 { background: lightseagreen; }
+.box6 { background: lightgreen; }
+
+
+/* Tema 6 */
+/* Esquinas redondeadas */
+.esquinas_redondeadas {
+  transition-duration: 0.2s;
+  font-family: Arial;
+  background-color: #a8cf45;
+  margin: 10px 10px;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px 30px;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.esquinas_redondeadas:hover {
+  border-radius: 20px;
+}
+
+/* Ejemplo bordes */
+.nav_ejemplo_bordes {
+  height: 40px;
+}
+
+.nav_ejemplo_bordes li {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px;
+  transition-duration: 0.2s;
+}
+
+.nav_ejemplo_bordes li:nth-of-type(1):hover { 
+  border-bottom: 3px dotted red; 
+}
+.nav_ejemplo_bordes li:nth-of-type(2):hover { 
+  border-bottom: 3px solid green; 
+}
+.nav_ejemplo_bordes li:nth-of-type(3):hover { 
+  border-bottom: 3px solid blue; 
+}
+
+/* Esquinas página */
+.esquina {
+  font-family: Arial;
+  background-color: #a8cf45;
+  margin: 10px 10px;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px 30px;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.esquina:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 0;
+  height: 0;
+  background: linear-gradient(45deg, white 45%, #aaa 50%, #ccc 60%, white);
+  transition-duration: 0.3s;
+}
+.esquina:hover:before {
+  width: 35px;
+  height: 30px;
+}
+
+/* Cambia color con keyframes */
+.animacion {
+  font-family: Arial;
+  background-color: blue;
+  margin: 15px 2px;
+  padding: 5px 40px;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  animation: 5s cambia_color infinite;
+}
+
+@keyframes cambia_color {
+  0%, 70% { background: blue; }
+  50% { background: red; }
+}
+
+/* Efecto Flash */
+
+.flash {
+  font-family: Arial;
+  background-color: #a8cf45;
+  margin: 15px 2px;
+  padding: 5px 40px;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.flash:hover {
+  animation: flash 0.7s 1;
+}
+
+@keyframes flash {
+  50% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* Efecto Vibrar */
+.vibrar {
+  font-family: Arial;
+  background-color: #a8cf45;
+  margin: 15px 2px;
+  padding: 5px 40px;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.vibrar:hover {
+  animation: vibrar 1s infinite;
+}
+
+@keyframes vibrar {
+  5%, 25%, 45%, 65%, 85% { transform: translateX(-10px); }
+  15%, 35%, 55%, 75%, 95% { transform: translateX(10px); }
+}
+
+/* Efecto Aparición */
+.aparicion {
+  font-family: Arial;
+  background-color: #a8cf45;
+  margin: 15px 2px;
+  padding: 5px 40px;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  animation: aparicion 2s infinite;
+  transform-origin: top left;
+}
+
+@keyframes aparicion {
+  0% { opacity: 0; }
+  50% { opacity: 0.8; }
+}
+
+/* Efecto Descolgado */
+.descolgado {
+  font-family: Arial;
+  background-color: #a8cf45;
+  margin: 15px 2px;
+  padding: 5px 40px;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  animation: descolgado 2s infinite;
+  transform-origin: top left;
+}
+
+@keyframes descolgado {
+  20%, 60% { transform: rotate(80deg); }
+  40% { transform: rotate(60deg); }
+  80% { opacity: 1; transform: rotate(60deg); }
+  100% { transform: translateY(400px); opacity: 0; }
+}
+
+/* Efecto Veloz */
+.veloz {
+  font-family: Arial;
+  background-color: #a8cf45;
+  margin: 15px 2px;
+  padding: 5px 40px;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  animation: veloz 1.5s infinite;
+}
+
+@keyframes veloz {
+  0% { opacity: 0; transform: translateX(-200%) skewX(30deg); }
+  60% { opacity: 1; transform: translateX(20%) skewX(-30deg); }
+  80% { transform: translateX(0%) skewX(15deg); }
+}
+
+/* Efecto Sombra Móvil */
+.sombra_movil {
+  font-family: Arial;
+  background-color: #a8cf45;
+  margin: 15px 2px;
+  padding: 5px 40px;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  transition-duration: 0.3s;
+  transform: translateX(0);
+}
+
+.sombra_movil:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  transition-duration: 0.3s;
+  background: radial-gradient(ellipse, var(--sombra-color) 0%, transparent 80%);
+}
+
+.sombra_movil:hover:before {
+  opacity: 0.4;
+  transform: translateY(6px);
+  animation: moversombra 1.5s infinite;
+}
+
+@keyframes moversombra {
+  50% { opacity: 1; transform: translateY(3px); }
+}
+
+/* Efecto Giro en el eje X */
+.giroX {
+  font-family: Arial;
+  background-color: #a8cf45;
+  margin: 15px 2px;
+  padding: 5px 40px;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  animation: giroX 1.5s 1;
+  backface-visibility: visible;
+}
+
+.giroX:hover {
+  animation: 3s giros infinite; /* Ajuste de la duración de la animación */
+  backface-visibility: visible;
+}
+
+@keyframes giroX {
+  0% { opacity: 0.5; transform: perspective(200px) rotateX(0deg); }
+  25% { transform: perspective(200px) rotateX(30deg); } 
+  50% { transform: perspective(200px) rotateX(-20deg); } 
+  75% { transform: perspective(200px) rotateX(10deg); } 
+  100% { opacity: 1; transform: perspective(200px) rotateX(0deg); } 
+}
+
+
+
+/* Efecto Cubo 3D */
+.box3D {
+  display: inline-block;
+  margin: 50px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transition-duration: 0.5s;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+}
+
+.box3D > div {
+  border: 2px solid black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.front {
+  background: green;
+}
+
+.back {  
+  background: red;
+  transform: translateZ(-100px) rotateY(90deg);
+  left: 100px;
+}
+
+.box3D:hover {
+  transform: perspective(800px) rotateY(-80deg);
+}
+
+
+
+/* Tema 7 Bootstrap */
+.divbootstrap{
+  font-family: Arial;
+  background-color: var(--ifm-color-primary-lightest);
+  border:2px solid white;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
 }
